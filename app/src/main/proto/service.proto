@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.bubenheimer.app.grpcservice";
+option java_outer_classname = "SomeGRPCServiceProto";
+
+package grpcservice;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+import "google/rpc/status.proto";
+
+message SomeStuff {
+    google.protobuf.Empty non_full = 1;
+    google.protobuf.Timestamp some_time = 2;
+    google.rpc.Status some_status = 3;
+}
